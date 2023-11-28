@@ -74,6 +74,4 @@ crashlytics-build.properties
 # For this specific project
 /[Aa]ssets/temp/*
 /[Aa]ssets/temp.meta
-/[Aa]ssets/Samples/*
-/[Aa]ssets/Samples.meta
 
