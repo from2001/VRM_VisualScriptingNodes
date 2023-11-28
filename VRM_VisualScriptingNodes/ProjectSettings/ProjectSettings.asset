@@ -47,7 +47,7 @@ PlayerSettings:
   defaultScreenWidthWeb: 960
   defaultScreenHeightWeb: 600
   m_StereoRenderingPath: 0
-  m_ActiveColorSpace: 0
+  m_ActiveColorSpace: 1
   unsupportedMSAAFallback: 0
   m_SpriteBatchVertexThreshold: 300
   m_MTRendering: 1
@@ -158,7 +158,9 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
+    Android: com.DefaultCompany.VRM_VisualScriptingNodes
     Standalone: com.DefaultCompany.VRM-VisualScriptingNodes
+    iPhone: com.DefaultCompany.VRM-VisualScriptingNodes
   buildNumber:
     Standalone: 0
     VisionOS: 0
