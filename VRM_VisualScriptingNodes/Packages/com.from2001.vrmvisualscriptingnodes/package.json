@@ -19,5 +19,12 @@
         "name": "from2001",
         "email": "from2001@hotmail.com",
         "url": "https://github.com/from2001/"
-    }
+    },
+    "samples": [
+        {
+            "displayName": "Usage samples",
+            "description": "Contains sample Visual Scripting Graphs for VRM Node",
+            "path": "Samples~/Sample1"
+        }
+    ]
 }
