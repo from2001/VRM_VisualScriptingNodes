@@ -1,3 +1,22 @@
 {
-	"name": "com.from2001.vrmvisualscriptingnodes"
+    "name": "com.from2001.vrmvisualscriptingnodes",
+    "rootNamespace": "",
+    "references": [
+        "VRM10",
+        "Unity.VisualScripting.Core",
+        "Unity.VisualScripting.Flow",
+        "Unity.VisualScripting.State",
+        "UniGLTF",
+        "VRMShaders.VRM.IO.Runtime",
+        "VRMShaders.GLTF.IO.Runtime"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
 }
