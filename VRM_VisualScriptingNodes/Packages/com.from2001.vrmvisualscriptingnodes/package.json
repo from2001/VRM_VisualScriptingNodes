@@ -1,30 +1,31 @@
 {
-    "name": "com.from2001.vrmvisualscriptingnodes",
-    "version": "0.0.1",
-    "displayName": "VRM Visual Scripting Nodes",
-    "description": "Unity Visual Scripting node library for VRM",
-    "unity": "2023.3",
-    "unityRelease": "",
-    "documentationUrl": "https://github.com/from2001/VRM_VisualScriptingNodes",
-    "changelogUrl": "",
-    "licensesUrl": "https://github.com/from2001/VRM_VisualScriptingNodes/blob/develop/LICENSE",
-    "dependencies": {
-        "com.vrmc.vrm": "0.115.0"
-    },
-    "keywords": [
-        "VRM",
-        "Visual Scripting"
-    ],
-    "author": {
-        "name": "from2001",
-        "email": "from2001@hotmail.com",
-        "url": "https://github.com/from2001/"
-    },
-    "samples": [
-        {
-            "displayName": "Usage samples",
-            "description": "Contains sample Visual Scripting Graphs for VRM Node",
-            "path": "Samples~/Sample1"
-        }
-    ]
+  "name": "com.from2001.vrmvisualscriptingnodes",
+  "version": "0.0.1",
+  "displayName": "VRM Visual Scripting Nodes",
+  "description": "Unity Visual Scripting node library for VRM",
+  "unity": "2023.3",
+  "documentationUrl": "https://github.com/from2001/VRM_VisualScriptingNodes",
+  "changelogUrl": "",
+  "licensesUrl": "https://github.com/from2001/VRM_VisualScriptingNodes/blob/develop/LICENSE",
+  "dependencies": {
+    "com.vrmc.vrm": "0.115.0",
+    "com.unity.render-pipelines.universal": "14.0.9",
+    "com.cysharp.unitask": "2.5.0"
+  },
+  "keywords": [
+    "VRM",
+    "Visual Scripting"
+  ],
+  "author": {
+    "name": "from2001",
+    "email": "from2001@hotmail.com",
+    "url": "https://github.com/from2001/"
+  },
+  "samples": [
+    {
+      "displayName": "Usage samples",
+      "description": "Contains sample Visual Scripting Graphs for VRM Node",
+      "path": "Samples~/Sample1"
+    }
+  ]
 }
