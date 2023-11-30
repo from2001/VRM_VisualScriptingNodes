@@ -5,6 +5,7 @@ using UnityEngine.Networking;
 using Cysharp.Threading.Tasks;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
+using System.Collections;
 
 namespace VrmVisualScriptingNodes
 {
@@ -29,25 +30,21 @@ namespace VrmVisualScriptingNodes
         private Vrm10Instance resultValue;
         protected override void Definition()
         {
-            inputTrigger = ControlInput("inputTrigger", Enter);
+            inputTrigger = ControlInputCoroutine("inputTrigger", Enter);
             outputTrigger = ControlOutput("outputTrigger");
 
             VrmURL = ValueInput<string>("VrmURL", "https://test.psychic-vr-lab.com/temp/temp.vrm");
             result = ValueOutput<Vrm10Instance>("result", (flow) => resultValue);
         }
 
-        private ControlOutput Enter(Flow flow)
+        private IEnumerator Enter(Flow flow)
         {
             string url = flow.GetValue<string>(VrmURL);
             Vrm10Instance vrmInstance = null;
-            UniTask.Create(async () =>
-            {
-                vrmInstance = await LoadVrm(url);
-                Debug.Log(vrmInstance.Vrm.Meta.Name);
-            }
-            ).Forget();
+            UniTask.Create(async () => {vrmInstance = await LoadVrm(url);}).Forget();
+            yield return new WaitUntil(() => vrmInstance);
             resultValue = vrmInstance;
-            return outputTrigger;
+            yield return outputTrigger;
         }
 
         /// <summary>
@@ -69,17 +66,9 @@ namespace VrmVisualScriptingNodes
                 canLoadVrm0X: true,
                 materialGenerator: GraphicsSettings.currentRenderPipeline is UniversalRenderPipelineAsset
                     ? new UrpVrm10MaterialDescriptorGenerator() : null
-             );
+            );
             return vrmInstance;
         }
-
-
-
-
-
-
-
-
     }
 
 
