@@ -8,7 +8,9 @@
         "Unity.VisualScripting.State",
         "UniGLTF",
         "VRMShaders.VRM.IO.Runtime",
-        "VRMShaders.GLTF.IO.Runtime"
+        "VRMShaders.GLTF.IO.Runtime",
+        "UniTask",
+        "Unity.RenderPipelines.Universal.Runtime"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
