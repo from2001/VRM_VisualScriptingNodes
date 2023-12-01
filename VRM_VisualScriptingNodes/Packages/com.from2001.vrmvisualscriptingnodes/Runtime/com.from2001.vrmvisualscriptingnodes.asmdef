@@ -10,7 +10,8 @@
         "VRMShaders.VRM.IO.Runtime",
         "VRMShaders.GLTF.IO.Runtime",
         "UniTask",
-        "Unity.RenderPipelines.Universal.Runtime"
+        "Unity.RenderPipelines.Universal.Runtime",
+        "VrmLib"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
