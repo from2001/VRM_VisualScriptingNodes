@@ -33,8 +33,8 @@ namespace VrmVisualScriptingNodes
             inputTrigger = ControlInputCoroutine("inputTrigger", Enter);
             outputTrigger = ControlOutput("outputTrigger");
 
-            VrmURL = ValueInput<string>("VrmURL", "https://test.psychic-vr-lab.com/temp/temp.vrm");
-            result = ValueOutput<GameObject>("result", (flow) => resultValue);
+            VrmURL = ValueInput<string>("VRM URL", "https://test.psychic-vr-lab.com/temp/temp.vrm");
+            result = ValueOutput<GameObject>("Game Object", (flow) => resultValue);
             
         }
 
