@@ -27,14 +27,15 @@ namespace VrmVisualScriptingNodes
         [DoNotSerialize]
         public ValueOutput result;
 
-        private Vrm10Instance resultValue;
+        private GameObject resultValue;
         protected override void Definition()
         {
             inputTrigger = ControlInputCoroutine("inputTrigger", Enter);
             outputTrigger = ControlOutput("outputTrigger");
 
             VrmURL = ValueInput<string>("VrmURL", "https://test.psychic-vr-lab.com/temp/temp.vrm");
-            result = ValueOutput<Vrm10Instance>("result", (flow) => resultValue);
+            result = ValueOutput<GameObject>("result", (flow) => resultValue);
+            
         }
 
         private IEnumerator Enter(Flow flow)
@@ -43,7 +44,7 @@ namespace VrmVisualScriptingNodes
             Vrm10Instance vrmInstance = null;
             UniTask.Create(async () => {vrmInstance = await LoadVrm(url);}).Forget();
             yield return new WaitUntil(() => vrmInstance);
-            resultValue = vrmInstance;
+            resultValue = vrmInstance.gameObject;
             yield return outputTrigger;
         }
 
@@ -70,12 +71,4 @@ namespace VrmVisualScriptingNodes
             return vrmInstance;
         }
     }
-
-
-
-
-
-
 }
-
-
