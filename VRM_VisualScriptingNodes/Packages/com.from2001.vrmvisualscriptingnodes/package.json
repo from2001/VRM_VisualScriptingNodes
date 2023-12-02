@@ -6,7 +6,7 @@
   "unity": "2021.3",
   "documentationUrl": "https://github.com/from2001/VRM_VisualScriptingNodes",
   "changelogUrl": "",
-  "licensesUrl": "https://github.com/from2001/VRM_VisualScriptingNodes/blob/develop/LICENSE",
+  "licensesUrl": "https://github.com/from2001/VRM_VisualScriptingNodes/blob/main/LICENSE",
   "dependencies": {
     "com.unity.visualscripting": "1.9.1",
     "com.vrmc.vrm": "0.115.0",
