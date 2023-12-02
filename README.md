@@ -1,17 +1,15 @@
-# What is VRM_VisualScriptingNodes
+# VRM Visual Scripting Nodes
 
-## Unity Visual Scripting node library for VRM 3d models.
+## Unity Visual Scripting node library for VRM models
 
 ### Features
 
 - Load VRM models with URL
 - Get meta information of VRM models
 
-# Installation
+## Install Option A: via OpenUPM command-line interface
 
-## Option A: Install via OpenUPM command-line interface
-
-```
+```shell
 # Install openupm-cli
 npm install -g openupm-cli
 
@@ -22,7 +20,7 @@ cd YOUR_UNITY_PROJECT_DIR
 openupm add com.from2001.vrmvisualscriptingnodes
 ```
 
-## Option B: Install via Unity package manager
+## Install Option B: via Unity package manager
 
 ### 1, Setup scoped registories
 
@@ -32,19 +30,19 @@ Add Scoped Registories and click "Apply".
 
 Name: `OpenUPM`  
 URL: `https://package.openupm.com`  
-Scopes:   
+Scopes:  
  `com.from2001.vrmvisualscriptingnodes`  
  `com.vrmc`  
  `com.cysharp.unitask`
 
-![](https://github.com/from2001/VRM_VisualScriptingNodes/assets/387880/da298940-5dfb-472a-baaf-7d3d613b962e)
+![Project Settings](https://github.com/from2001/VRM_VisualScriptingNodes/assets/387880/da298940-5dfb-472a-baaf-7d3d613b962e)
 
 ### 2, Install VRM Visual Scripting Node Package with Package Manager
 
-![](https://github.com/from2001/VRM_VisualScriptingNodes/assets/387880/2809ed0b-61a8-47d9-bdb0-24335ac60163)
+![Package Manager](https://github.com/from2001/VRM_VisualScriptingNodes/assets/387880/2809ed0b-61a8-47d9-bdb0-24335ac60163)
 
-# How to Use
+## How to Use
 
 This Visual Scripting Graph shows how to load VRM with URL and attach animation as well as getting meta information of the VRM model. LoadVRM node only works with Coroutine checked in On Start Event triger node.
 
-![](https://github.com/from2001/VRM_VisualScriptingNodes/assets/387880/a0055284-7ad1-434c-80c3-f1f91c25881f)
+![Script Graph](https://github.com/from2001/VRM_VisualScriptingNodes/assets/387880/a0055284-7ad1-434c-80c3-f1f91c25881f)
