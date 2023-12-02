@@ -43,7 +43,8 @@
       "name": "OpenUPM",
       "url": "https://package.openupm.com",
       "scopes": [
-        "com.vrmc"
+        "com.vrmc",
+        "com.cysharp.unitask"
       ]
     }
   ]
