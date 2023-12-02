@@ -1,15 +1,16 @@
 {
   "name": "com.from2001.vrmvisualscriptingnodes",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "displayName": "VRM Visual Scripting Nodes",
   "description": "Unity Visual Scripting node library for VRM",
-  "unity": "2023.3",
+  "unity": "2021.3",
   "documentationUrl": "https://github.com/from2001/VRM_VisualScriptingNodes",
   "changelogUrl": "",
   "licensesUrl": "https://github.com/from2001/VRM_VisualScriptingNodes/blob/develop/LICENSE",
   "dependencies": {
+    "com.unity.visualscripting": "1.9.1",
     "com.vrmc.vrm": "0.115.0",
-    "com.unity.render-pipelines.universal": "14.0.9",
+    "com.unity.render-pipelines.universal": "12.1.13",
     "com.cysharp.unitask": "2.5.0"
   },
   "keywords": [

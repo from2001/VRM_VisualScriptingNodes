@@ -1,6 +1,11 @@
-# VRM_VisualScriptingNodes
+# What is VRM_VisualScriptingNodes
 
-Unity Visual Scripting node library for VRM
+## Unity Visual Scripting node library for VRM 3d models.
+
+### Features
+
+- Load VRM models with URL
+- Get meta information of VRM models
 
 # Installation
 
@@ -21,7 +26,7 @@ Scopes: 
 
 ## 2, Install VRM Visual Scripting Node Package
 
-Install the unity package with the github package URL (This prcess will be replace when this repository is registered in OpenUPM)
+Install the unity package with the github package URL (This prcess will be replaced when this repository is registered in OpenUPM)
 
 - `Window` -> `Package Manager` -> `+` -> `Add package from git URL...`
 
