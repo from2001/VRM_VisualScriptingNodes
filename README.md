@@ -26,7 +26,7 @@ Scopes: 
 
 ## 2, Install VRM Visual Scripting Node Package
 
-Install the unity package with the github package URL (This prcess will be replace when this repository is registered in OpenUPM)
+Install the unity package with the github package URL (This prcess will be replaced when this repository is registered in OpenUPM)
 
 - `Window` -> `Package Manager` -> `+` -> `Add package from git URL...`
 
