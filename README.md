@@ -1,6 +1,11 @@
-# VRM_VisualScriptingNodes
+# What is VRM_VisualScriptingNodes
 
-Unity Visual Scripting node library for VRM
+## Unity Visual Scripting node library for VRM 3d models.
+
+### Features
+
+- Load VRM models with URL
+- Get meta information of VRM models
 
 # Installation
 
