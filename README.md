@@ -17,7 +17,7 @@ npm install -g openupm-cli
 cd YOUR_UNITY_PROJECT_DIR
 
 # Install package:
-openupm add com.from2001.vrmvisualscriptingnodes
+openupm add com.from2001.vrm-visualscripting-nodes
 ```
 
 ## Install Option B: via Unity package manager
@@ -32,7 +32,7 @@ Name: `OpenUPM`
 URL: `https://package.openupm.com`
 Scopes:
 `com.cysharp.unitask`
-`com.from2001.vrmvisualscriptingnodes`
+`com.from2001.vrm-visualscripting-nodes`
 `com.openupm`
 `com.vrmc.gltf`
 `com.vrmc.vrm`
@@ -54,10 +54,24 @@ Notice: Check "Coroutine" in "On Start Event" triger node.
 
 ## Samples
 
-These samples can be imported.  
+These samples can be imported.
 
-1. Load vrm  
-1. Attach animation  
-1. Get meta information
+1. Load vrm
+2. Attach animation
+3. Get meta information
 
 ![InstallSamples](https://github.com/from2001/VRM_VisualScriptingNodes/assets/387880/31c42fde-8b71-46e5-a4d5-a488015ca379)
+
+## ToDO
+
+Implement features of [VRM-1.0 APIs](https://vrm-c.github.io/UniVRM/ja/vrm1/api_update.html#expression)
+
+- ~~Load~~
+- Expression
+- LookAt
+  - Gaze
+  - SetYawPitch
+
+Add some useful features
+
+- Cache data in local storage
