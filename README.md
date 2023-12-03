@@ -71,3 +71,7 @@ Implement features of [VRM-1.0 APIs](https://vrm-c.github.io/UniVRM/ja/vrm1/api_
 - LookAt
   - Gaze
   - SetYawPitch
+
+Add some useful features
+
+- Cache data in local storage
