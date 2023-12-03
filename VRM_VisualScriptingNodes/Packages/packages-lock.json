@@ -12,8 +12,9 @@
       "depth": 0,
       "source": "embedded",
       "dependencies": {
+        "com.unity.visualscripting": "1.9.1",
         "com.vrmc.vrm": "0.115.0",
-        "com.unity.render-pipelines.universal": "14.0.9",
+        "com.unity.render-pipelines.universal": "10.10.1",
         "com.cysharp.unitask": "2.5.0"
       }
     },
@@ -72,7 +73,7 @@
     },
     "com.unity.ide.visualstudio": {
       "version": "2.0.22",
-      "depth": 1,
+      "depth": 0,
       "source": "registry",
       "dependencies": {
         "com.unity.test-framework": "1.1.9"

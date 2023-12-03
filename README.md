@@ -28,14 +28,17 @@ Open "Edit - Project Settings - Package Manager" on your Unity project.
 
 Add Scoped Registories and click "Apply".
 
-Name: `OpenUPM`  
-URL: `https://package.openupm.com`  
-Scopes:  
- `com.from2001.vrmvisualscriptingnodes`  
- `com.vrmc`  
- `com.cysharp.unitask`
+Name: `OpenUPM`
+URL: `https://package.openupm.com`
+Scopes:
+`com.cysharp.unitask`
+`com.from2001.vrmvisualscriptingnodes`
+`com.openupm`
+`com.vrmc.gltf`
+`com.vrmc.vrm`
+`com.vrmc.vrmshaders`
 
-![Project Settings](https://github.com/from2001/VRM_VisualScriptingNodes/assets/387880/da298940-5dfb-472a-baaf-7d3d613b962e)
+![Project Settings](https://github.com/from2001/VRM_VisualScriptingNodes/assets/387880/682f1f2a-e061-4de5-a020-13d98ab2bf89)
 
 ### 2, Install VRM Visual Scripting Node Package with Package Manager
 
@@ -45,4 +48,16 @@ Scopes:
 
 This Visual Scripting Graph shows how to load VRM with URL and attach animation as well as getting meta information of the VRM model. LoadVRM node only works with Coroutine checked in On Start Event triger node.
 
+Notice: Check "Coroutine" in "On Start Event" triger node.
+
 ![Script Graph](https://github.com/from2001/VRM_VisualScriptingNodes/assets/387880/a0055284-7ad1-434c-80c3-f1f91c25881f)
+
+## Samples
+
+These samples can be imported.  
+
+1. Load vrm  
+1. Attach animation  
+1. Get meta information
+
+![InstallSamples](https://github.com/from2001/VRM_VisualScriptingNodes/assets/387880/31c42fde-8b71-46e5-a4d5-a488015ca379)
