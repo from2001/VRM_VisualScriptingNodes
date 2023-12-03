@@ -12,8 +12,9 @@
       "depth": 0,
       "source": "embedded",
       "dependencies": {
+        "com.unity.visualscripting": "1.9.1",
         "com.vrmc.vrm": "0.115.0",
-        "com.unity.render-pipelines.universal": "14.0.9",
+        "com.unity.render-pipelines.universal": "10.10.1",
         "com.cysharp.unitask": "2.5.0"
       }
     },
