@@ -17,7 +17,7 @@ npm install -g openupm-cli
 cd YOUR_UNITY_PROJECT_DIR
 
 # Install package:
-openupm add com.from2001.vrmvisualscriptingnodes
+openupm add com.from2001.vrm-visualscripting-nodes
 ```
 
 ## Install Option B: via Unity package manager
@@ -32,7 +32,7 @@ Name: `OpenUPM`
 URL: `https://package.openupm.com`
 Scopes:
 `com.cysharp.unitask`
-`com.from2001.vrmvisualscriptingnodes`
+`com.from2001.vrm-visualscripting-nodes`
 `com.openupm`
 `com.vrmc.gltf`
 `com.vrmc.vrm`

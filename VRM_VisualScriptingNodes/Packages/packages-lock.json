@@ -7,8 +7,8 @@
       "dependencies": {},
       "url": "https://package.openupm.com"
     },
-    "com.from2001.vrmvisualscriptingnodes": {
-      "version": "file:com.from2001.vrmvisualscriptingnodes",
+    "com.from2001.vrm-visualscripting-nodes": {
+      "version": "file:com.from2001.vrm-visualscripting-nodes",
       "depth": 0,
       "source": "embedded",
       "dependencies": {

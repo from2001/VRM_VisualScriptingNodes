@@ -1,5 +1,5 @@
 {
-    "name": "com.from2001.vrmvisualscriptingnodes",
+    "name": "com.from2001.vrm-visualscripting-nodes",
     "rootNamespace": "",
     "references": [
         "VRM10",
