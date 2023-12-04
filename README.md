@@ -75,3 +75,8 @@ Implement features of [VRM-1.0 APIs](https://vrm-c.github.io/UniVRM/ja/vrm1/api_
 Add some useful features
 
 - Cache data in local storage
+
+## Repositories
+
+- [GitHub](https://github.com/from2001/com.from2001.vrm-visualscripting-nodes/)
+- [OpenUPM](https://openupm.com/packages/com.from2001.vrm-visualscripting-nodes/)
