@@ -1,6 +1,6 @@
 {
   "name": "com.from2001.vrm-visualscripting-nodes",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "displayName": "VRM Visual Scripting Nodes",
   "description": "Unity Visual Scripting node library for VRM",
   "unity": "2021.3",
