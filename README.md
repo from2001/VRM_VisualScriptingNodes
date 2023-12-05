@@ -62,10 +62,6 @@ These samples can be imported.
 
 ![InstallSamples](https://github.com/from2001/VRM_VisualScriptingNodes/assets/387880/31c42fde-8b71-46e5-a4d5-a488015ca379)
 
-## Vision OS Support
-
-Shaders are replaced with `Universal Render Pipeline/Unlit` shader
-
 ## ToDo
 
 Implement features of [VRM-1.0 APIs](https://vrm-c.github.io/UniVRM/ja/vrm1/api_update.html#expression)
@@ -86,3 +82,16 @@ Add some useful features
 
 - [GitHub](https://github.com/from2001/com.from2001.vrm-visualscripting-nodes/)
 - [OpenUPM](https://openupm.com/packages/com.from2001.vrm-visualscripting-nodes/)
+
+## Others
+
+### Vision OS Support
+
+Shaders are replaced with `Universal Render Pipeline/Lit` shader on ViisonOS
+
+### Avoid Multiple scripted importers error
+
+If you want to use [glTFast Visual Scripting Nodes](https://openupm.com/packages/com.from2001.gltfast-visualscripting-nodes/) and [VRM Visual Scripting Nodes](https://openupm.com/packages/com.from2001.vrm-visualscripting-nodes/) in a same project, add two Scripting Define Symbols in `Project Settings` > `Player` > `Other Settings` > `Script Compilation` > `Scripting Define Symbols`
+
+`UNIGLTF_DISABLE_DEFAULT_GLTF_IMPORTER`
+`UNIGLTF_DISABLE_DEFAULT_GLB_IMPORTER`
