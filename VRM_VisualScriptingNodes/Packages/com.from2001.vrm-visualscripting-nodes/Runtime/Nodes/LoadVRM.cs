@@ -6,6 +6,7 @@ using Cysharp.Threading.Tasks;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using System.Collections;
+using VisualScriptingNodes;
 
 namespace VrmVisualScriptingNodes
 {
@@ -35,16 +36,19 @@ namespace VrmVisualScriptingNodes
 
             VrmURL = ValueInput<string>("VRM URL", "");
             result = ValueOutput<GameObject>("Game Object", (flow) => resultValue);
-            
+
         }
 
         private IEnumerator Enter(Flow flow)
         {
             string url = flow.GetValue<string>(VrmURL);
             Vrm10Instance vrmInstance = null;
-            UniTask.Create(async () => {vrmInstance = await LoadVrm(url);}).Forget();
+            UniTask.Create(async () => { vrmInstance = await LoadVrm(url); }).Forget();
             yield return new WaitUntil(() => vrmInstance);
             resultValue = vrmInstance.gameObject;
+
+            Utils.ReplaceErrorShaders(resultValue, Utils.GetShaderForErrorReplacement());
+
             yield return outputTrigger;
         }
 
