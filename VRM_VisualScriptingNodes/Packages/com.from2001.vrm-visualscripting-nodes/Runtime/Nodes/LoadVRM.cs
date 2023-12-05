@@ -47,7 +47,7 @@ namespace VrmVisualScriptingNodes
             yield return new WaitUntil(() => vrmInstance);
             resultValue = vrmInstance.gameObject;
 
-            Utils.ReplaceErrorShaders(resultValue, Utils.GetShaderForErrorReplacement());
+            if (Utils.IsVisionOS()) Utils.ChangeShadersWithTexture(resultValue, "Universal Render Pipeline/Unlit", "_MainTex", "_BaseMap");
 
             yield return outputTrigger;
         }
@@ -66,6 +66,7 @@ namespace VrmVisualScriptingNodes
             {
                 VrmBytes = request.downloadHandler.data;
             }
+
             Vrm10Instance vrmInstance = await Vrm10.LoadBytesAsync(
                 VrmBytes,
                 canLoadVrm0X: true,
