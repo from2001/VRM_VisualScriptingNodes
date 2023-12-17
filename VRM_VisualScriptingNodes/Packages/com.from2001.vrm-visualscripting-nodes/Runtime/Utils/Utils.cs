@@ -19,18 +19,12 @@ namespace VisualScriptingNodes
         {
             //When operatingSystem is "visionOS", return true
             if (SystemInfo.operatingSystem.Contains("visionOS")) return true;
-
-            //When VolumeCamera exists in scene, return true
-            foreach (GameObject obj in GetAllObjectsInScene())
-            {
-                Component[] components = obj.GetComponents<Component>();
-                foreach (Component component in components)
-                {
-                    if (component.GetType().Name=="VolumeCamera") return true;
-                }
-            }
-
+            if (Application.platform == RuntimePlatform.VisionOS) return true;
+#if UNITY_VISIONOS
+            return true;
+#else
             return false;
+#endif
         }
 
         /// <summary>
@@ -56,8 +50,6 @@ namespace VisualScriptingNodes
                 }
             }
         }
-
-
 
         /// <summary>
         /// Change all shaders of GameObject to new one.
@@ -89,5 +81,87 @@ namespace VisualScriptingNodes
                 }
             }
         }
+
+        /// <summary>
+        /// Change all URP/MToon10 shaders of GameObject to URP/Unlit.
+        /// This method is intended to be used for VRM models on VisionOS.
+        /// </summary>
+        /// <param name="targetObject"></param>
+        public static void ChangeMtoon10ShaderToUnlitOfGameobject(GameObject targetObject)
+        {
+            SkinnedMeshRenderer[] skinedMeshrenderers = targetObject.GetComponentsInChildren<SkinnedMeshRenderer>();
+            foreach (SkinnedMeshRenderer renderer in skinedMeshrenderers) foreach (Material mat in renderer.materials) ChangeMToon10ShaderToUnlit(mat);
+
+            MeshRenderer[] meshrenderers = targetObject.GetComponentsInChildren<MeshRenderer>();
+            foreach (MeshRenderer renderer in meshrenderers) foreach (Material mat in renderer.materials) ChangeMToon10ShaderToUnlit(mat);
+        }
+
+        /// <summary>
+        /// Change URP/MToon10 shader to URP/Unlit shader.
+        /// </summary>
+        /// <param name="mat_original"></param>
+        static void ChangeMToon10ShaderToUnlit(Material mat_original)
+        {
+            if (mat_original.shader.name != "VRM10/Universal Render Pipeline/MToon10")
+            {
+                return; // Exit if the shader is not MToon10
+            }
+
+            // Create a temporary copy of the material to extract properties
+            Material tempMat = new(mat_original);
+
+            // Create a new material with the Unlit shader
+            Material newMat = new(Shader.Find("Universal Render Pipeline/Unlit"));
+
+            // Change the shader
+            newMat.shader = Shader.Find("Universal Render Pipeline/Unlit");
+
+            // Transfer texture and color properties
+            if (tempMat.HasProperty("_MainTex") && newMat.HasProperty("_BaseMap"))
+            {
+                newMat.SetTexture("_BaseMap", tempMat.GetTexture("_MainTex"));
+            }
+            if (tempMat.HasProperty("_Color") && newMat.HasProperty("_BaseColor"))
+            {
+                newMat.SetColor("_BaseColor", tempMat.GetColor("_Color"));
+            }
+
+            // Transfer alpha cutoff property
+            if (tempMat.HasProperty("_Cutoff"))
+            {
+                newMat.SetFloat("_Cutoff", tempMat.GetFloat("_Cutoff"));
+            }
+
+            // Handle Surface Type (Opaque/Transparent)
+            bool isTransparent = tempMat.GetFloat("_AlphaMode") > 0 || tempMat.GetFloat("_TransparentWithZWrite") > 0;
+            if (isTransparent)
+            {
+                newMat.SetFloat("_Surface", 1.0f); // Set to Transparent
+                newMat.SetFloat("_AlphaClip", 1.0f); // Enable Alpha Clipping
+            }
+            else
+            {
+                newMat.SetFloat("_Surface", 0.0f); // Set to Opaque
+                newMat.SetFloat("_AlphaClip", 0.0f); // Disable Alpha Clipping
+            }
+
+            // Set blend modes for transparent materials
+            if (isTransparent)
+            {
+                newMat.SetFloat("_SrcBlend", (float)UnityEngine.Rendering.BlendMode.SrcAlpha);
+                newMat.SetFloat("_DstBlend", (float)UnityEngine.Rendering.BlendMode.OneMinusSrcAlpha);
+                newMat.SetFloat("_ZWrite", 0.0f); // Typically, ZWrite is off for transparent materials
+            }
+
+            // Dispose of the temporary material
+            UnityEngine.Object.DestroyImmediate(tempMat);
+
+            // Additional blend mode settings can be adjusted here if needed
+
+            // Apply the new material
+            mat_original = newMat;
+        }
+
+
     }
 }

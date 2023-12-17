@@ -47,7 +47,8 @@ namespace VrmVisualScriptingNodes
             yield return new WaitUntil(() => vrmInstance);
             resultValue = vrmInstance.gameObject;
 
-            if (Utils.IsVisionOS()) Utils.ChangeShadersWithTexture(resultValue, "Universal Render Pipeline/Unlit", "_MainTex", "_BaseMap");
+            // Change shaders of VRM to Unlit if platform is VisionOS
+            if (Utils.IsVisionOS()) Utils.ChangeMtoon10ShaderToUnlitOfGameobject(resultValue);
 
             yield return outputTrigger;
         }
