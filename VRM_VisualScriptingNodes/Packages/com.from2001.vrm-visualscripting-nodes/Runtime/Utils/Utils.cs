@@ -105,6 +105,7 @@ namespace VisualScriptingNodes
 
         /// <summary>
         /// Change URP/MToon10 shader to URP/Unlit shader.
+        /// This method is not used now because it is not compatible with VisionOS.
         /// </summary>
         /// <param name="mat_original"></param>
         static Material GetUnlitMaterialMadeByMToon10Shader(Material mat_original)
