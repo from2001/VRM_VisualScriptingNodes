@@ -11,7 +11,9 @@
         "VRMShaders.GLTF.IO.Runtime",
         "UniTask",
         "Unity.RenderPipelines.Universal.Runtime",
-        "VrmLib"
+        "VrmLib",
+        "VRMShaders.VRM10.MToon10.Runtime",
+        "Unity.ShaderGraph.Utilities"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
