@@ -72,7 +72,7 @@ namespace VrmVisualScriptingNodes
                 VrmBytes,
                 canLoadVrm0X: true,
                 materialGenerator: GraphicsSettings.currentRenderPipeline is UniversalRenderPipelineAsset
-                    ? new UrpVrm10MaterialDescriptorGenerator() : null
+                    ? new UrpUnlitMaterialDescriptorGenerator() : null
             );
             return vrmInstance;
         }
