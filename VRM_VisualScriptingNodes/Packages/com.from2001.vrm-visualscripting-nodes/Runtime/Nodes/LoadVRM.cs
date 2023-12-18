@@ -43,12 +43,10 @@ namespace VrmVisualScriptingNodes
         {
             string url = flow.GetValue<string>(VrmURL);
             Vrm10Instance vrmInstance = null;
+
             UniTask.Create(async () => { vrmInstance = await LoadVrm(url); }).Forget();
             yield return new WaitUntil(() => vrmInstance);
             resultValue = vrmInstance.gameObject;
-
-            // Change shaders of VRM to Unlit if platform is VisionOS
-            if (Utils.IsVisionOS()) Utils.ChangeMtoon10ShaderToUnlitOfGameobject(resultValue);
 
             yield return outputTrigger;
         }
@@ -68,13 +66,27 @@ namespace VrmVisualScriptingNodes
                 VrmBytes = request.downloadHandler.data;
             }
 
-            Vrm10Instance vrmInstance = await Vrm10.LoadBytesAsync(
-                VrmBytes,
-                canLoadVrm0X: true,
-                materialGenerator: GraphicsSettings.currentRenderPipeline is UniversalRenderPipelineAsset
-                    ? new UrpVrm10MaterialDescriptorGenerator() : null
-            );
-            return vrmInstance;
+            if (!Utils.IsVisionOS())
+            {
+                Vrm10Instance vrmInstance = await Vrm10.LoadBytesAsync(
+                    VrmBytes,
+                    canLoadVrm0X: true,
+                    materialGenerator: GraphicsSettings.currentRenderPipeline is UniversalRenderPipelineAsset
+                        ? new UrpVrm10MaterialDescriptorGenerator() : null
+                );
+                return vrmInstance;
+            }
+            else
+            {
+                Vrm10Instance vrmInstance = await Vrm10.LoadBytesAsync(
+                    VrmBytes,
+                    canLoadVrm0X: true,
+                    materialGenerator: GraphicsSettings.currentRenderPipeline is UniversalRenderPipelineAsset
+                        ? new UrpUnlitMaterialDescriptorGenerator() : null
+                );
+                return vrmInstance;
+            }
+            
         }
     }
 }

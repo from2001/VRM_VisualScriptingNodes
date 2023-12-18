@@ -68,11 +68,12 @@ Implement features of [VRM-1.0 APIs](https://vrm-c.github.io/UniVRM/ja/vrm1/api_
 
 - ~~Load~~
 - ~~VisionOS Support (Partially supported)~~
-- Improve Shader replacement for VisionOS Support
+- ~~Improve Shader replacement for VisionOS Support~~
 - Expression
 - LookAt
   - Gaze
   - SetYawPitch
+- Set target location
 
 Add some useful features
 
