@@ -26,6 +26,9 @@ namespace VrmVisualScriptingNodes
         public ValueInput VrmURL;
 
         [DoNotSerialize]
+        public ValueInput TargetGameobject;
+
+        [DoNotSerialize]
         public ValueOutput result;
 
         private GameObject resultValue;
@@ -35,6 +38,7 @@ namespace VrmVisualScriptingNodes
             outputTrigger = ControlOutput("outputTrigger");
 
             VrmURL = ValueInput<string>("VRM URL", "");
+            TargetGameobject = ValueInput<GameObject>("Target Game Object", null);
             result = ValueOutput<GameObject>("Game Object", (flow) => resultValue);
 
         }
@@ -44,10 +48,20 @@ namespace VrmVisualScriptingNodes
             string url = flow.GetValue<string>(VrmURL);
             Vrm10Instance vrmInstance = null;
 
+            // Load VRM
             UniTask.Create(async () => { vrmInstance = await LoadVrm(url); }).Forget();
             yield return new WaitUntil(() => vrmInstance);
-            resultValue = vrmInstance.gameObject;
 
+            // Set VRM location to Target Game Object
+            var Target = flow.GetValue<GameObject>(TargetGameobject);
+            if(Target != null){
+                vrmInstance.transform.SetParent(Target.transform);
+                vrmInstance.transform.localPosition = Vector3.zero;
+                vrmInstance.transform.localRotation = Quaternion.identity;
+                vrmInstance.transform.localScale = Vector3.one;
+            } 
+
+            resultValue = vrmInstance.gameObject;
             yield return outputTrigger;
         }
 
