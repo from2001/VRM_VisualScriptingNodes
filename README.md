@@ -73,7 +73,7 @@ Implement features of [VRM-1.0 APIs](https://vrm-c.github.io/UniVRM/ja/vrm1/api_
 - LookAt
   - Gaze
   - SetYawPitch
-- Set target location
+- ~~Set target location~~
 
 Add some useful features
 
