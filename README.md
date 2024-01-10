@@ -7,6 +7,10 @@
 - Load VRM models with URL
 - Get meta information of VRM models
 
+<img width="698" alt="vrm_node" src="https://github.com/from2001/VRM_VisualScriptingNodes/assets/387880/33e7c2fb-c75d-45ab-966d-e925b8717466">
+
+<img width="749" alt="Screenshot 2024-01-10 at 23 54 40" src="https://github.com/from2001/VRM_VisualScriptingNodes/assets/387880/612b2a32-9139-49ab-97e2-c25bcf2e9104">
+
 ## Install Option A: via OpenUPM command-line interface
 
 ```shell
