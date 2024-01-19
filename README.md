@@ -81,8 +81,7 @@ Implement features of [VRM-1.0 APIs](https://vrm-c.github.io/UniVRM/ja/vrm1/api_
 
 Add some useful features
 
-- Cache data in local storage
-- Runtime load anim file
+- ~~Cache data in local storage~~
 
 ## Repositories
 
