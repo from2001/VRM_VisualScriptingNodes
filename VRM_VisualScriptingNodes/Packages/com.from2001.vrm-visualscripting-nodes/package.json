@@ -11,7 +11,8 @@
     "com.unity.visualscripting": "1.9.1",
     "com.vrmc.vrm": "0.115.0",
     "com.unity.render-pipelines.universal": "10.10.1",
-    "com.cysharp.unitask": "2.4.1"
+    "com.cysharp.unitask": "2.4.1",
+    "com.styly.webrequest-visualscripting-nodes": "0.0.1"
   },
   "keywords": [
     "VRM",
