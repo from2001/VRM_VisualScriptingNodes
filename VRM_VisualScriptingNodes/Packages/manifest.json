@@ -37,15 +37,17 @@
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0",
-    "com.unity.ide.visualstudio": "2.0.22"
+    "com.unity.ide.visualstudio": "2.0.22",
+    "com.styly.webrequest-visualscripting-nodes": "0.0.1"
   },
   "scopedRegistries": [
     {
       "name": "OpenUPM",
       "url": "https://package.openupm.com",
       "scopes": [
-        "com.vrmc",
-        "com.cysharp.unitask"
+        "com.cysharp.unitask",
+        "com.styly.webrequest-visualscripting-nodes",
+        "com.vrmc"
       ]
     }
   ]

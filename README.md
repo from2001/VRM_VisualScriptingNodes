@@ -6,6 +6,7 @@
 
 - Load VRM models with URL
 - Get meta information of VRM models
+- VisionOS Support (Shaders will be replace with Unlit untill official shader support. Build with Polyspatial)
 
 <img width="698" alt="vrm_node" src="https://github.com/from2001/VRM_VisualScriptingNodes/assets/387880/33e7c2fb-c75d-45ab-966d-e925b8717466">
 
@@ -81,8 +82,7 @@ Implement features of [VRM-1.0 APIs](https://vrm-c.github.io/UniVRM/ja/vrm1/api_
 
 Add some useful features
 
-- Cache data in local storage
-- Runtime load anim file
+- ~~Cache data in local storage~~
 
 ## Repositories
 

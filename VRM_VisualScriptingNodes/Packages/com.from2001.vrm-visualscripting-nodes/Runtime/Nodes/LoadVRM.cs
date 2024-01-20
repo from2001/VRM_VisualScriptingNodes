@@ -7,6 +7,8 @@ using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 using System.Collections;
 using VisualScriptingNodes;
+using STYLY.Http;
+using STYLY.Http.Service;
 
 namespace VrmVisualScriptingNodes
 {
@@ -54,12 +56,13 @@ namespace VrmVisualScriptingNodes
 
             // Set VRM location to Target Game Object
             var Target = flow.GetValue<GameObject>(TargetGameobject);
-            if(Target != null){
+            if (Target != null)
+            {
                 vrmInstance.transform.SetParent(Target.transform);
                 vrmInstance.transform.localPosition = Vector3.zero;
                 vrmInstance.transform.localRotation = Quaternion.identity;
                 vrmInstance.transform.localScale = Vector3.one;
-            } 
+            }
 
             resultValue = vrmInstance.gameObject;
             yield return outputTrigger;
@@ -73,13 +76,16 @@ namespace VrmVisualScriptingNodes
         private async UniTask<Vrm10Instance> LoadVrm(string URL)
         {
             byte[] VrmBytes = null;
-            UnityWebRequest request = UnityWebRequest.Get(URL);
-            await request.SendWebRequest();
-            if (request.result == UnityWebRequest.Result.Success)
-            {
-                VrmBytes = request.downloadHandler.data;
-            }
 
+            HttpResponse httpResponse = await Http.Get(URL)
+                .UseCache(CacheType.UseCacheAlways)
+                .OnError(response => Debug.Log(response.StatusCode))
+                .SendAsync();
+            if(httpResponse.IsSuccessful)
+            {
+                VrmBytes = httpResponse.Bytes;
+            }
+            
             if (!Utils.IsVisionOS())
             {
                 Vrm10Instance vrmInstance = await Vrm10.LoadBytesAsync(
@@ -100,7 +106,7 @@ namespace VrmVisualScriptingNodes
                 );
                 return vrmInstance;
             }
-            
+
         }
     }
 }
