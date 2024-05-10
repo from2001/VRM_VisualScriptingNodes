@@ -1,6 +1,6 @@
 {
   "name": "com.from2001.vrm-visualscripting-nodes",
-  "version": "0.1.9",
+  "version": "0.1.10",
   "displayName": "VRM Visual Scripting Nodes",
   "description": "Unity Visual Scripting node library for VRM",
   "unity": "2021.3",
@@ -12,7 +12,7 @@
     "com.vrmc.vrm": "0.115.0",
     "com.unity.render-pipelines.universal": "10.10.1",
     "com.cysharp.unitask": "2.4.1",
-    "com.styly.webrequest-visualscripting-nodes": "0.0.1"
+    "com.styly.webrequest-visualscripting-nodes": "0.0.5"
   },
   "keywords": [
     "VRM",
