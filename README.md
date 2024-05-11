@@ -93,7 +93,7 @@ Add some useful features
 
 ### Vision OS Support
 
-Shaders are replaced with [PolySpatialEnvironmentDiffuseShader](https://github.com/segurvita/PolySpatialEnvironmentDiffuseShader) shader on ViisonOS
+Materials are replaced with [PolySpatialEnvironmentDiffuseShader](https://github.com/segurvita/PolySpatialEnvironmentDiffuseShader) shader materials on visionOS
 
 ### Avoid Multiple scripted importers error
 
