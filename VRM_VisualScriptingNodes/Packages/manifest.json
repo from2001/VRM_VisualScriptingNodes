@@ -47,7 +47,8 @@
       "scopes": [
         "com.cysharp.unitask",
         "com.styly.webrequest-visualscripting-nodes",
-        "com.vrmc"
+        "com.vrmc",
+        "com.segur.poly-spatial-environment-diffuse-shader"
       ]
     }
   ]
