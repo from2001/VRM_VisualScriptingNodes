@@ -93,7 +93,7 @@ Add some useful features
 
 ### Vision OS Support
 
-Shaders are replaced with `Universal Render Pipeline/Lit` shader on ViisonOS
+Shaders are replaced with [PolySpatialEnvironmentDiffuseShader](https://github.com/segurvita/PolySpatialEnvironmentDiffuseShader) shader on ViisonOS
 
 ### Avoid Multiple scripted importers error
 
