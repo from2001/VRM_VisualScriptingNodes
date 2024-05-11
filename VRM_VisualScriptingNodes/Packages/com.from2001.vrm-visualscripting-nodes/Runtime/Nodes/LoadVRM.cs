@@ -9,6 +9,7 @@ using System.Collections;
 using VisualScriptingNodes;
 using STYLY.Http;
 using STYLY.Http.Service;
+using Segur.PolySpatialEnvironmentDiffuseShader.Runtime;
 
 namespace VrmVisualScriptingNodes
 {
@@ -97,12 +98,20 @@ namespace VrmVisualScriptingNodes
                 return vrmInstance;
             }
             else
-            {
+            {   
+                // Set MaterialDescriptorGenerator for VisionOS
+
+                // Unlit Material 
+                // var MaterialDescriptorGenerator_visionOS = new UrpUnlitMaterialDescriptorGenerator();
+
+                // Environment Diffuse Shader Material By segurvita
+                var MaterialDescriptorGenerator_visionOS = new EnvironmentDiffuseMaterialDescriptorGenerator();
+
                 Vrm10Instance vrmInstance = await Vrm10.LoadBytesAsync(
                     VrmBytes,
                     canLoadVrm0X: true,
                     materialGenerator: GraphicsSettings.currentRenderPipeline is UniversalRenderPipelineAsset
-                        ? new UrpUnlitMaterialDescriptorGenerator() : null
+                        ? MaterialDescriptorGenerator_visionOS : null
                 );
                 return vrmInstance;
             }
