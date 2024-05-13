@@ -12,7 +12,7 @@
 
 <img width="749" alt="Screenshot 2024-01-10 at 23 54 40" src="https://github.com/from2001/VRM_VisualScriptingNodes/assets/387880/612b2a32-9139-49ab-97e2-c25bcf2e9104">
 
-## Install Option A: via OpenUPM command-line interface
+## Install via OpenUPM command-line interface
 
 ```shell
 # Install openupm-cli
@@ -24,30 +24,6 @@ cd YOUR_UNITY_PROJECT_DIR
 # Install package:
 openupm add com.from2001.vrm-visualscripting-nodes
 ```
-
-## Install Option B: via Unity package manager
-
-### 1. Setup scoped registories
-
-Open "Edit - Project Settings - Package Manager" on your Unity project.
-
-Add Scoped Registories and click "Apply".
-
-Name: `OpenUPM`
-URL: `https://package.openupm.com`
-Scopes:
-`com.cysharp.unitask`
-`com.from2001.vrm-visualscripting-nodes`
-`com.openupm`
-`com.vrmc.gltf`
-`com.vrmc.vrm`
-`com.vrmc.vrmshaders`
-
-![Project Settings](https://github.com/from2001/VRM_VisualScriptingNodes/assets/387880/595b1d91-4435-4195-9b6d-1ca6b43113ce)
-
-### 2. Install VRM Visual Scripting Node Package with Package Manager
-
-![Package Manager](https://github.com/from2001/VRM_VisualScriptingNodes/assets/387880/2809ed0b-61a8-47d9-bdb0-24335ac60163)
 
 ## How to Use
 
