@@ -100,10 +100,6 @@ namespace VrmVisualScriptingNodes
             else
             {   
                 // Set MaterialDescriptorGenerator for VisionOS
-
-                // Unlit Material 
-                // var MaterialDescriptorGenerator_visionOS = new UrpUnlitMaterialDescriptorGenerator();
-
                 // Environment Diffuse Shader Material By segurvita
                 var MaterialDescriptorGenerator_visionOS = new EnvironmentDiffuseMaterialDescriptorGenerator();
 

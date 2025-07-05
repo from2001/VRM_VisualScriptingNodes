@@ -7,12 +7,9 @@
         "Unity.VisualScripting.Flow",
         "Unity.VisualScripting.State",
         "UniGLTF",
-        "VRMShaders.VRM.IO.Runtime",
-        "VRMShaders.GLTF.IO.Runtime",
         "UniTask",
         "Unity.RenderPipelines.Universal.Runtime",
         "VrmLib",
-        "VRMShaders.VRM10.MToon10.Runtime",
         "Unity.ShaderGraph.Utilities",
         "com.styly.webrequest-visualscripting-nodes",
         "Unity.PolySpatialEnvironmentDiffuseShader"
