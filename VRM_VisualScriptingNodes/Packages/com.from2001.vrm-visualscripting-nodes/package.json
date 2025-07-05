@@ -12,7 +12,7 @@
     "com.vrmc.vrm": "0.125.0",
     "com.unity.render-pipelines.universal": "10.10.1",
     "com.cysharp.unitask": "2.5.4",
-    "com.styly.webrequest-visualscripting-nodes": "0.0.5",
+    "com.styly.webrequest-visualscripting-nodes": "0.0.7",
     "com.segur.poly-spatial-environment-diffuse-shader": "0.4.0"
   },
   "keywords": [
