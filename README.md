@@ -45,7 +45,7 @@ These samples can be imported.
 
 ## ToDo
 
-Implement features of [VRM-1.0 APIs](https://vrm-c.github.io/UniVRM/ja/vrm1/api_update.html#expression)
+Implemented features of [VRM-1.0 APIs](https://vrm-c.github.io/UniVRM/ja/vrm1/api_update.html#expression) for Visual Scripting node.
 
 - ~~Load~~
 - ~~VisionOS Support (Partially supported)~~
@@ -69,7 +69,7 @@ Add some useful features
 
 ### Vision OS Support
 
-Materials are replaced with [PolySpatialEnvironmentDiffuseShader](https://github.com/segurvita/PolySpatialEnvironmentDiffuseShader) shader materials on visionOS
+Materials are replaced with [PolySpatialEnvironmentDiffuseShader](https://github.com/segurvita/PolySpatialEnvironmentDiffuseShader) shader materials on visionOS. Many thanks to [segurvita](https://github.com/segurvita).
 
 ### Avoid Multiple scripted importers error
 
